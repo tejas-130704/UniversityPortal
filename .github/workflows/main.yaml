@@ -13,8 +13,10 @@ jobs:
       # Checkout code
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # important for gh-pages
 
-      # Setup Node.js (version 20)
+      # Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -34,3 +36,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          user_name: github-actions
+          user_email: github-actions@github.com
+          repo: ${{ github.repository }}
