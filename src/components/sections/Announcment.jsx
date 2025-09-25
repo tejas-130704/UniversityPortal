@@ -13,10 +13,10 @@ const announcements = [
 
 const Announcement = () => {
     return (
-        <div className="h-[40px] overflow-hidden relative bg-gray-100 border border-gray-300 flex items-center ">
+        <div className="h-[40px] overflow-hidden relative bg-gray-100 border border-gray-300 flex items-center mt-21 md:mt-0">
             <div 
             data-aos="fade-right"
-            className="absolute left-0  h-full bg-[#071952] text-white z-20 p-4 flex items-center text-2xl">Announcements</div>
+            className="absolute -left-1  h-full bg-[#071952] text-white z-20 p-4 flex items-center md:text-2xl text-sm mx-0">Announcements</div>
             <div className="marquee">
                
                 {announcements.map((item, index) => (

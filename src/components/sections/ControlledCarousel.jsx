@@ -13,7 +13,6 @@ const ControlledCarousel = () => {
   const prevSlide = () =>
     setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
 
-
   useEffect(() => {
     if (isPaused) return; 
     const id = setInterval(() => {
@@ -23,18 +22,17 @@ const ControlledCarousel = () => {
   }, [images.length, isPaused]);
 
   return (
+    // Hidden on small devices, visible from md (768px) up
     <div
-      className="relative w-full h-[80vh] overflow-hidden rounded-t-lg"
+      className="hidden lg:block relative w-full h-[80vh] overflow-hidden rounded-t-lg mt-10"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      {/* Track: width is implicit by flex children; we translate by percentages */}
       <div
         className="flex transition-transform duration-700 ease-in-out h-full will-change-transform"
         style={{ transform: `translateX(-${current * 100}%)` }}
       >
         {images.map((img, idx) => (
-          // Each slide MUST be exactly the carousel width:
           <div key={idx} className="min-w-full h-full flex-shrink-0">
             <img
               src={img}
@@ -75,7 +73,6 @@ const ControlledCarousel = () => {
       >
         ❯
       </button>
-
     </div>
   );
 };
