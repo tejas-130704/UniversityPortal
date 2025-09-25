@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import aboutImg from "../../assets/images/about.jpg";
-import aboutFilter from "../../assets/images/aboutFilter.png";
+import aboutFilter from "../../assets/images/aboutfilter.png";
 
 
 const About = () => {
