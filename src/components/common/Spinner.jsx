@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import GridLoader from "react-spinners/GridLoader";
 
-const Spinner = ({ loading = false, color = "#000000", size = 20 }) => {
+const Spinner = ({ loading = false, color = "#088395", size = 20 }) => {
   const [isShowLoader, setShowLoader] = useState(loading);
 
   window.addEventListener("load", function() {
