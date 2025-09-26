@@ -1,20 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import GridLoader from "react-spinners/GridLoader";
 
-const Spinner = ({ loading = false, color = "#088395", size = 20 }) => {
+const Spinner = ({ loading = true, color = "#088395", size = 20 }) => {
   const [isShowLoader, setShowLoader] = useState(loading);
 
-  window.addEventListener("load", function() {
-    setShowLoader(true)
-  });
+  useEffect(() => {
+    const handleLoad = () => {
+      setShowLoader(true);
+      setTimeout(() => {
+        setShowLoader(false);
+      }, 2000); // hide loader after 2s
+    };
 
-  
+    window.addEventListener("load", handleLoad);
 
-  document.addEventListener("DOMContentLoaded", () => {
-    setTimeout(() => {
-      setShowLoader(false);
-    }, 2000);
-})
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, []);
+
   return (
     <>
       {isShowLoader && (

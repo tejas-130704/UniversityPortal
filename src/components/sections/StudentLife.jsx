@@ -4,7 +4,7 @@ import studentLife2 from "../../assets/images/studentLife2.webp";
 
 const StudentLife = () => {
   return (
-    <div className="min-h-screen p-22 md:p-8 w-[90%] md:w-[70%] mx-auto md:pt-22" id="studentlife">
+    <div className="min-h-screen pt-22 md:p-8 w-[90%] md:w-[70%] mx-auto md:pt-22" id="studentlife">
       {/* Title */}
       <div data-aos="fade-up" className="text-3xl md:text-5xl text-black text-center mb-4 font-bold">
         Student Life
