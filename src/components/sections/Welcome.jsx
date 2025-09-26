@@ -4,7 +4,7 @@ import bgImage from "../../assets/images/coep.jpg"; // your background image
 const Welcome = () => {
   return (
     <section
-      className=" lg:hidden relative h-[50vh] md:h-screen flex items-center justify-center text-center text-white"
+      className=" lg:hidden lg:object-contain px-2 relative h-[90vh] md:h-screen flex items-center justify-center text-center text-white"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: "cover",
@@ -17,7 +17,7 @@ const Welcome = () => {
 
       {/* Content */}
       <div className="relative z-10 px-4 sm:px-6 md:px-12 max-w-3xl">
-        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">
           Welcome to Our University
         </h1>
         <p className="mt-4 text-base sm:text-lg md:text-xl font-medium">
